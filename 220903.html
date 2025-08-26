@@ -1,0 +1,1849 @@
+
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>220903</title>
+        <style>
+          @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          html, body {
+            font-family: 'Pretendard-Regular', Arial, sans-serif !important;
+            font-size: 14px;
+            background-color: #f9f9ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+          }
+
+          .chat-container {
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+            padding: 20px 10px;
+            background-color: #eee8fe;
+            box-sizing: border-box;
+          }
+
+          .date-banner {
+            text-align: center;
+            margin: 60px auto;
+            padding: 8px 18px;
+            background: #f8f7fd;
+            border-radius: 15px;
+            display: inline-block;
+            font-weight: bold;
+            color: #6d6c6c;
+          }
+
+          .message-group {
+            margin-bottom: 5px;
+            max-width: 80%;
+          }
+
+          .message-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+          }
+
+          .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            flex-shrink: 0;
+          }
+
+          .message-info {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .name {
+            font-weight: bold;
+            margin-bottom: -10px;
+          }
+
+          .message {
+            display: flex;
+            align-items: flex-end;
+            margin-top: 5px;
+            transform: translateY(-22px);
+          }
+
+          .text-bubble {
+            background-color: #7746ff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 2px 18px 18px 2px;
+            max-width: 80%;
+            word-wrap: break-word;
+            margin-left: 49px;
+            position: relative;
+            text-align: left;
+          }
+
+          .message-group .message:last-child .text-bubble {
+            border-radius: 2px 18px 18px 18px;
+          }
+
+          .timestamp {
+            font-size: 12px;
+            color: #666;
+            margin-left: 5px;
+            white-space: nowrap;
+          }
+
+          .message-group .message:not(:last-child) .timestamp {
+            display: none;
+          }
+
+          .message-group .message:last-child .timestamp {
+            position: absolute;
+            right: -40px;
+            bottom: 0;
+          }
+
+        </style>
+    </head>
+    <body>
+      <div class="chat-container">
+        <div class="date-banner">2022년 09월 03일</div>
+    
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">자나~~
+                  <span class="timestamp">02:36</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">보고싶어
+                  <span class="timestamp">02:37</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">한국은 날씨 어때~
+                  <span class="timestamp">02:37</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">이제 좀 쌀쌀 하려나
+                  <span class="timestamp">02:37</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">따뜻하게 입어야 해
+                  <span class="timestamp">02:37</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">감기 걸린다~
+                  <span class="timestamp">02:38</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">나 엊그제인가
+                  <span class="timestamp">02:38</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">비행기 타는데
+                  <span class="timestamp">02:38</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">소지품 검사 하는거 있잖아
+                  <span class="timestamp">02:39</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">거기서 뭐가 걸린거야
+                  <span class="timestamp">02:39</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">라이스크리스피가 걸렸나봐
+                  <span class="timestamp">02:39</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">오레오 라이스크리스피인데
+                  <span class="timestamp">02:39</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">과자인데
+                  <span class="timestamp">02:39</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">아무튼 그게 걸려가지고
+                  <span class="timestamp">02:40</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">가방을 검사 하시는데
+                  <span class="timestamp">02:40</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">라이스 크리스피 8개 들어있는거랑
+                  <span class="timestamp">02:40</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그거 꺼내시더니
+                  <span class="timestamp">02:40</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">오 쏘 큐트
+                  <span class="timestamp">02:40</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">큐트가이
+                  <span class="timestamp">02:40</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">막 그러시는겨
+                  <span class="timestamp">02:40</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">그래서
+                  <span class="timestamp">02:41</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">오우 노노
+                  <span class="timestamp">02:41</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">아임 핫가이
+                  <span class="timestamp">02:41</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">하려다가
+                  <span class="timestamp">02:41</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">잡혀 갈것 같아서
+                  <span class="timestamp">02:41</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">참았다
+                  <span class="timestamp">02:41</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">02:41</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그래서 다시 주섬주섬 챙기고
+                  <span class="timestamp">02:41</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">아직 안먹었어
+                  <span class="timestamp">02:42</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">헤헤
+                  <span class="timestamp">02:42</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">한국가서 먹어야지
+                  <span class="timestamp">02:42</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">혹시 미국 갈 일 있으면
+                  <span class="timestamp">02:42</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">꼭 먹어봐
+                  <span class="timestamp">02:42</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">진짜 꿀맛
+                  <span class="timestamp">02:42</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">나 미국에 있으면서
+                  <span class="timestamp">02:42</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">한5개 먹었어
+                  <span class="timestamp">02:42</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">근데 살 찌는 맛이긴 해
+                  <span class="timestamp">02:43</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">엄청 달아
+                  <span class="timestamp">02:43</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">한국에 있는지 모르겠는데
+                  <span class="timestamp">02:44</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">내가 알기론 미국에 있는게
+                  <span class="timestamp">02:44</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">더 맛있다고 들었어
+                  <span class="timestamp">02:44</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그 스타 벇
+                  <span class="timestamp">02:44</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">에서 파는게
+                  <span class="timestamp">02:44</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">리얼 꿀맛..
+                  <span class="timestamp">02:44</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">미각 공유 하고싶다
+                  <span class="timestamp">02:45</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">한국가면
+                  <span class="timestamp">02:45</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">라면 바로 먹어야겠다
+                  <span class="timestamp">02:45</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">너구리…!!!!
+                  <span class="timestamp">02:45</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">5봉 먹어보려…
+                  <span class="timestamp">02:46</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">02:46</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">배가 좀 줄은것같아
+                  <span class="timestamp">02:46</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">미국와서 많이 안 먹었어
+                  <span class="timestamp">02:46</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">운동하기 싫어서
+                  <span class="timestamp">02:47</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">안 먹었어
+                  <span class="timestamp">02:47</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">한국가서 다시 해야지~
+                  <span class="timestamp">02:47</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">돌아가면 운동 해야지 다시
+                  <span class="timestamp">02:47</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">미국와서 한 일주일 동안
+                  <span class="timestamp">02:47</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">운동 하다가
+                  <span class="timestamp">02:48</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">도저히 안될것같아서
+                  <span class="timestamp">02:48</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">격하게 잤어
+                  <span class="timestamp">02:48</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">쎄게 자버렸다
+                  <span class="timestamp">02:48</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">언능 자야지 이제
+                  <span class="timestamp">02:49</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">벌써 금요일이야?
+                  <span class="timestamp">02:49</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">토요일이구나
+                  <span class="timestamp">02:50</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">시간 너무 빠르네
+                  <span class="timestamp">02:50</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">여기는 지금 1시50분
+                  <span class="timestamp">02:50</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">오후~
+                  <span class="timestamp">02:50</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">밥은
+                  <span class="timestamp">02:51</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">좀 이따 먹게
+                  <span class="timestamp">02:51</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">초콜릿 먹었어
+                  <span class="timestamp">02:51</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">심심하면
+                  <span class="timestamp">02:52</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">브이로그 구경 슬쩍 해봐~
+                  <span class="timestamp">02:52</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">일본에서 브이로그 찍었엉
+                  <span class="timestamp">02:52</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">잘했네에
+                  <span class="timestamp">02:53</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">아 이번에는
+                  <span class="timestamp">02:53</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">기념품을 못 샀네
+                  <span class="timestamp">02:53</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">아 라이스크리스피 샀네
+                  <span class="timestamp">02:54</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">나이스
+                  <span class="timestamp">02:54</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">사실 기념품 보다
+                  <span class="timestamp">02:54</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">더 힘든게 있어
+                  <span class="timestamp">02:54</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">미국오면 선글라스 가게가 많아서
+                  <span class="timestamp">02:54</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">약간 참기 힘들때가 있어
+                  <span class="timestamp">02:54</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">02:54</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">하읏..!
+                  <span class="timestamp">02:55</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">하면서 지나가
+                  <span class="timestamp">02:55</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그래도 하나 샀으니
+                  <span class="timestamp">02:55</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">욕심 내지 않는다는 마인드
+                  <span class="timestamp">02:55</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">과유불급이여
+                  <span class="timestamp">02:56</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">나는 많으면 잃어버릴가능성
+                  <span class="timestamp">02:56</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">50퍼센트 증가야
+                  <span class="timestamp">02:56</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">80이라니
+                  <span class="timestamp">02:56</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그 정도는 아니거든
+                  <span class="timestamp">02:56</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">나는 근데
+                  <span class="timestamp">02:57</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">다시 돌아 오잖아
+                  <span class="timestamp">02:57</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그럼 된거지~
+                  <span class="timestamp">02:57</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">결국 이번에 잃어버린게 없다네~
+                  <span class="timestamp">02:57</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">으하하하
+                  <span class="timestamp">02:57</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">함씨랑 다르다구 ^^
+                  <span class="timestamp">02:57</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">함씨는
+                  <span class="timestamp">02:58</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">해외에 나가면 하나씩 두고 와
+                  <span class="timestamp">02:58</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">영역표시 하나바
+                  <span class="timestamp">02:58</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">나는 존중해
+                  <span class="timestamp">02:58</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">나는 방을 잃어버려?
+                  <span class="timestamp">02:59</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">02:59</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그렇네..
+                  <span class="timestamp">02:59</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">되 찾으니 된거다!
+                  <span class="timestamp">02:59</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">한국에 @@ 두고갔네
+                  <span class="timestamp">02:59</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">찾으러가면 되는거지?
+                  <span class="timestamp">03:00</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">어디에 있든
+                  <span class="timestamp">03:00</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">수거…?
+                  <span class="timestamp">03:00</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">수거 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">03:00</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">찾으러 갈게❤️
+                  <span class="timestamp">03:00</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 아 미안
+                  <span class="timestamp">03:00</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">표현이 좀 그랬지?
+                  <span class="timestamp">03:01</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">수거라고 하니까
+                  <span class="timestamp">03:01</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">약간 수건 같자나
+                  <span class="timestamp">03:01</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">짜장면 빈그릇 간접체험이래 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">03:01</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">미안하다 빈그릇 체험 시켜서
+                  <span class="timestamp">03:02</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">요새는 짜장면 빈그릇 안가지고 가잖아
+                  <span class="timestamp">03:02</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">세상이 변했다
+                  <span class="timestamp">03:02</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그 감성이 있는데 말이야
+                  <span class="timestamp">03:02</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">그릇 가지러 오실때
+                  <span class="timestamp">03:03</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">요구루트 하나 챙겨드리고
+                  <span class="timestamp">03:03</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">아~ 그런 낭만이 있었느데!!!
+                  <span class="timestamp">03:03</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">짜장면 먹고싶구만
+                  <span class="timestamp">03:04</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">허허
+                  <span class="timestamp">03:04</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">짜장vs짬뽕
+                  <span class="timestamp">03:04</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">당연 짜장이지
+                  <span class="timestamp">03:04</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">짬뽕도 좋지~~
+                  <span class="timestamp">03:05</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">요새는 또 얼마나 좋네
+                  <span class="timestamp">03:05</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">좋니
+                  <span class="timestamp">03:05</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">짬짜면이 가능한 시대잖아
+                  <span class="timestamp">03:05</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">굳이 파를 나눌 필요가 없다~!
+                  <span class="timestamp">03:05</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">부먹 찍먹
+                  <span class="timestamp">03:05</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">나는
+                  <span class="timestamp">03:05</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">같이 먹는 사람한테 맞추는 편인데
+                  <span class="timestamp">03:06</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">배려 할수있지~
+                  <span class="timestamp">03:06</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">어떻게 먹어도 맛있으니
+                  <span class="timestamp">03:06</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">근데 탕수육 너무 비싸
+                  <span class="timestamp">03:06</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">마음머고 시켜야해
+                  <span class="timestamp">03:07</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">마음 먹고
+                  <span class="timestamp">03:07</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">크림새우?
+                  <span class="timestamp">03:07</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">크림새우는 아빠한테 전화 한통 드려야지
+                  <span class="timestamp">03:07</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">그거보다 더 비싼거 시킨다?
+                  <span class="timestamp">03:08</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">이제 그 날은 생일
+                  <span class="timestamp">03:08</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">03:08</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">에헷 생일이니까 이제 곡
+                  <span class="timestamp">03:08</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">곧
+                  <span class="timestamp">03:08</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">크림새우 칠리새우
+                  <span class="timestamp">03:08</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">다 시켜버려
+                  <span class="timestamp">03:08</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">으하하하하
+                  <span class="timestamp">03:09</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">중국집 혼날 준비 해버려
+                  <span class="timestamp">03:09</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그날 만큼은 하겐다즈도 오케이야
+                  <span class="timestamp">03:09</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">근데 실은
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">생일을 그렇게
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">막 챙기려고 안했어서
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">살면서
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그냐앙 소박한게 좋긴해 나는
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">케잌 하나랑
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">내가 좋아하는 사람들이랑
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">같이 있으면 그거면 충분허이
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">디스이스 낭만
+                  <span class="timestamp">03:10</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">선물이 뭐가 중요하니
+                  <span class="timestamp">03:11</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">옆에 있어주는게 낭만이라네…
+                  <span class="timestamp">03:11</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">러비티가 선물이쥐
+                  <span class="timestamp">03:11</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">되게 그게 마음이 예쁜것같아
+                  <span class="timestamp">03:12</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">바쁠수도 있는거잖아
+                  <span class="timestamp">03:12</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">내 생일 날에
+                  <span class="timestamp">03:12</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">근데 같이 축하해준다는게
+                  <span class="timestamp">03:12</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">너무 감사한거지~
+                  <span class="timestamp">03:12</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">바빠서 못 봐도!
+                  <span class="timestamp">03:13</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">마음이 중요한거지이
+                  <span class="timestamp">03:13</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">하하하
+                  <span class="timestamp">03:13</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">마음이면 돼
+                  <span class="timestamp">03:14</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">히히
+                  <span class="timestamp">03:14</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">과분 하답니다
+                  <span class="timestamp">03:14</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">사랑 많이 받아서
+                  <span class="timestamp">03:15</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">안 넘치게 잘 담는중야
+                  <span class="timestamp">03:15</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">아니이 학교를 빠지라는 소리는
+                  <span class="timestamp">03:16</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">아녔는데에…
+                  <span class="timestamp">03:16</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">학교는 잘 가야지~
+                  <span class="timestamp">03:16</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">근데 나는
+                  <span class="timestamp">03:16</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">되게 뭐랄까
+                  <span class="timestamp">03:16</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">이 직장을 다니면서??
+                  <span class="timestamp">03:16</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">본인 할 일을 하면서??
+                  <span class="timestamp">03:16</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">사랑주는게
+                  <span class="timestamp">03:16</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">너무 리스펙이야
+                  <span class="timestamp">03:17</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">진짜로
+                  <span class="timestamp">03:17</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">약간 자랑스러워
+                  <span class="timestamp">03:17</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">알바도 하구 학교도 가구
+                  <span class="timestamp">03:17</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">일도 하면서
+                  <span class="timestamp">03:17</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">보면 진짜 너무 자랑스러워
+                  <span class="timestamp">03:18</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">일을 안해도!
+                  <span class="timestamp">03:18</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">되게 멋있다구 생각했어 쭉
+                  <span class="timestamp">03:18</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">그래서 먼가
+                  <span class="timestamp">03:19</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">일 얘기 프메에서 해주면
+                  <span class="timestamp">03:19</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">좋더라 나는
+                  <span class="timestamp">03:19</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">직장에서 있었던 일이라던가~
+                  <span class="timestamp">03:19</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">학교에서 있었던 일이라던가
+                  <span class="timestamp">03:19</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">교수님 얘기도 재미써
+                  <span class="timestamp">03:19</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">03:19</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">다 읽지
+                  <span class="timestamp">03:19</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">오늘 머 힘든일이 있었는데에
+                  <span class="timestamp">03:20</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그럼에도 너가 너무 보고싶었다!
+                  <span class="timestamp">03:20</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">그런 얘기!?
+                  <span class="timestamp">03:20</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">이런 얘기는 처음하는것 같긴한데
+                  <span class="timestamp">03:21</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">나 때문에 하고싶은일 포기는하는거면
+                  <span class="timestamp">03:21</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">안 그랬으면 좋게써~
+                  <span class="timestamp">03:21</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">@@ 힘든일은
+                  <span class="timestamp">03:22</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">라이스크리스피 먹는거에서
+                  <span class="timestamp">03:23</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">끝났으면 좋겠다
+                  <span class="timestamp">03:23</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">진짜 맛있거든~
+                  <span class="timestamp">03:23</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">03:23</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  <span class="timestamp">03:23</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">이제 슬슬
+                  <span class="timestamp">03:23</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">가봐야겠는걸
+                  <span class="timestamp">03:23</span>
+                  </div>
+                </div>
+                
+        </div>
+       
+        <div class="message-group">
+          <div class="message-header">
+            <img src="https://github.com/tkaqufdl/backupformh/blob/main/profile/220817.JPG?raw=true" alt="Avatar" class="avatar">
+            <div class="name">핫가이🔥</div>
+          </div>
+        
+                <div class="message">
+                  <div class="text-bubble">언능자
+                  <span class="timestamp">03:24</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">사랑해~
+                  <span class="timestamp">03:24</span>
+                  </div>
+                </div>
+                
+                <div class="message">
+                  <div class="text-bubble">❤️❤️
+                  <span class="timestamp">03:24</span>
+                  </div>
+                </div>
+                
+        </div>
+       </div>
+<!-- 닉네임 스크립트 시작 -->
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const nickname = sessionStorage.getItem("nickname") || "러비티";
+    const displayName = nickname === "러비티" ? "<strong>러비티</strong>" : nickname;
+
+    function replaceInTextNodes(node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const replaced = node.textContent.replace(/@@/g, displayName);
+        if (replaced !== node.textContent) {
+          const span = document.createElement("span");
+          span.innerHTML = replaced;
+          node.parentNode.replaceChild(span, node);
+        }
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        node.childNodes.forEach(replaceInTextNodes);
+      }
+    }
+
+    replaceInTextNodes(document.body);
+  });
+</script>
+<!-- 닉네임 스크립트 끝 -->
+
+</body></html>
