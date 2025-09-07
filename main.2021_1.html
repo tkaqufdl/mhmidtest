@@ -83,6 +83,41 @@
     .year-menu .divider {
       color: #ccc;
     }
+
+    /* === 수정된 부분 (토글 버튼 & 그리드) === */
+    .view-toggle {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .view-toggle button {
+      margin: 0 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+      font-weight: 700;
+      font-family: 'Pretendard-Regular', sans-serif;
+      text-transform: uppercase; /* 대문자 */
+    }
+    .view-toggle button:hover {
+      background: #ddd;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개 */
+      gap: 6px;
+      max-width: 340px;
+      margin: 20px auto;
+    }
+    .grid-container img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    /* ======================================= */
+
     .button-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -134,7 +169,9 @@
 <img alt="프사" class="profile-pic" src="https://github.com/tkaqufdl/backupformh/raw/main/profile/221123.JPG"/>
 <div class="profile-text">
 <div class="nickname">미니강쥐🐶❤️</div>
-<div class="username">@min_h.ee</div>
+<div class="username">
+  <a href="https://www.instagram.com/min_h.ee/" target="_blank">@min_h.ee</a>
+</div>
 <div class="status">러비티가 너무 보고싶다아아아!!!!</div>
 </div>
 </div>
@@ -145,6 +182,13 @@
 <span class="divider">|</span>
 <span class="year" onclick="location.href='main.2023_1.html'">2023</span>
 </div>
+<!-- === 토글 버튼 (대문자 Pretendard) === -->
+<div class="view-toggle">
+<button onclick="showSection('messages')">MESSAGES</button>
+<button onclick="showSection('media')">MEDIA</button>
+</div>
+<!-- 메시지 섹션 -->
+<div id="messages-section">
 <div class="button-grid">
 <a class="date-button" href="210416.html">
 <img alt="썸네일" src="https://github.com/tkaqufdl/backupformh/blob/main/thumbnails/210416.jpeg?raw=true"/>
@@ -178,5 +222,99 @@
 <a class="page" href="main.2021_31.html">31</a>
 <a class="page" href="main.2021_2.html">»</a>
 </div>
-</body>
+</div>
+<!-- 미디어 섹션 (기본 숨김) -->
+<div id="media-section" style="display:none;">
+<div class="grid-container"><a href="210416.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210416-1.JPG?raw=true"/></a>
+<a href="210416.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210416-2.JPG?raw=true"/></a>
+<a href="210416.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210416-3.JPG?raw=true"/></a>
+<a href="210422.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210422-1.jpg?raw=true"/></a>
+<a href="210422.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210422-2.jpg?raw=true"/></a>
+<a href="210422.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210422-3.jpg?raw=true"/></a>
+<a href="210502.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210502.jpg?raw=true"/></a>
+<a href="210521.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210521.jpg?raw=true"/></a>
+<a href="210523.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210523.jpg?raw=true"/></a>
+<a href="210526.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210526-1.jpg?raw=true"/></a>
+<a href="210526.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210526-2.jpg?raw=true"/></a>
+<a href="210527.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210527-1.jpg?raw=true"/></a>
+<a href="210527.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210527-2.jpg?raw=true"/></a>
+<a href="210529.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210529.jpeg?raw=true"/></a>
+<a href="210530.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210530-1.jpeg?raw=true"/></a>
+<a href="210530.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210530-2.jpeg?raw=true"/></a>
+<a href="210531.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210531.jpeg?raw=true"/></a>
+<a href="210601.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210601.jpeg?raw=true"/></a>
+<a href="210603.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210603.jpeg?raw=true"/></a>
+<a href="210604.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210604-1.jpeg?raw=true"/></a>
+<a href="210604.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210604-2.jpeg?raw=true"/></a>
+<a href="210604.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210604-3.jpeg?raw=true"/></a>
+<a href="210607.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210607.jpeg?raw=true"/></a>
+<a href="210619.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210619.jpeg?raw=true"/></a>
+<a href="210626.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210626.jpeg?raw=true"/></a>
+<a href="210627.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210627.jpeg?raw=true"/></a>
+<a href="210630.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210630.jpeg?raw=true"/></a>
+<a href="210701.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210701.jpeg?raw=true"/></a>
+<a href="210704.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210704.jpeg?raw=true"/></a>
+<a href="210705.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210705(저화질).PNG?raw=true"/></a>
+<a href="210706.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210706.jpeg?raw=true"/></a>
+<a href="210710.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210710-1.jpeg?raw=true"/></a>
+<a href="210710.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210710-2.jpeg?raw=true"/></a>
+<a href="210711.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210711.jpeg?raw=true"/></a>
+<a href="210714.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210714.jpeg?raw=true"/></a>
+<a href="210719.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210719.jpeg?raw=true"/></a>
+<a href="210720.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210720.jpeg?raw=true"/></a>
+<a href="210723.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210723-1.jpeg?raw=true"/></a>
+<a href="210723.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210723-2.jpeg?raw=true"/></a>
+<a href="210806.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210806-1.jpg?raw=true"/></a>
+<a href="210806.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210806-2.jpeg?raw=true"/></a>
+<a href="210811.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210811.jpeg?raw=true"/></a>
+<a href="210813.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210813.JPG?raw=true"/></a>
+<a href="210814.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210814.jpeg?raw=true"/></a>
+<a href="210819.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210819-1.jpeg?raw=true"/></a>
+<a href="210820.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210820-1.PNG?raw=true"/></a>
+<a href="210820.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210820-2.jpeg?raw=true"/></a>
+<a href="210823.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210823.JPG?raw=true"/></a>
+<a href="210826.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210826-1.jpeg?raw=true"/></a>
+<a href="210826.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210826-2.jpeg?raw=true"/></a>
+<a href="210829.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210829-1.jpeg?raw=true"/></a>
+<a href="210829.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210829-2.jpeg?raw=true"/></a>
+<a href="210910.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210909.jpeg?raw=true"/></a>
+<a href="210910.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210910-1.jpeg?raw=true"/></a>
+<a href="210911.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210910-2.jpeg?raw=true"/></a>
+<a href="210912.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210912.jpeg?raw=true"/></a>
+<a href="210915.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210915.jpeg?raw=true"/></a>
+<a href="210916.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210916.jpeg?raw=true"/></a>
+<a href="210920.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210920.jpeg?raw=true"/></a>
+<a href="210921.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210921- 5.JPG?raw=true"/></a>
+<a href="210921.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210921-1.JPG?raw=true"/></a>
+<a href="210921.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210921-2.JPG?raw=true"/></a>
+<a href="210921.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210921-3.JPG?raw=true"/></a>
+<a href="210921.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210921-4.JPG?raw=true"/></a>
+<a href="210921.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/210921-6.JPG?raw=true"/></a>
+<a href="211002.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211002-1.jpeg?raw=true"/></a>
+<a href="211002.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211002-2.jpeg?raw=true"/></a>
+<a href="211002.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211002-3.jpeg?raw=true"/></a>
+<a href="211002.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211002-4.jpeg?raw=true"/></a>
+<a href="211002.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211002-5.jpeg?raw=true"/></a>
+<a href="211007.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211007.jpeg?raw=true"/></a>
+<a href="211008.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211008.jpeg?raw=true"/></a>
+<a href="211011.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211010.jpeg?raw=true"/></a>
+<a href="211011.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211011.jpeg?raw=true"/></a>
+<a href="211018.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211017.jpeg?raw=true"/></a>
+<a href="211020.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211020-1.jpeg?raw=true"/></a>
+<a href="211020.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211020-2.jpeg?raw=true"/></a>
+<a href="211021.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211021.jpeg?raw=true"/></a>
+<a href="211026.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211026.JPG?raw=true"/></a>
+<a href="211106.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211106.jpeg?raw=true"/></a>
+<a href="211116.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211116.JPG?raw=true"/></a>
+<a href="211124.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211124.jpeg?raw=true"/></a>
+<a href="211205.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211205.jpeg?raw=true"/></a>
+<a href="211222.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2021/211222.JPG?raw=true"/></a>
+</div>
+<script>
+function showSection(id) {
+  document.getElementById("messages-section").style.display = (id==="messages") ? "block" : "none";
+  document.getElementById("media-section").style.display    = (id==="media") ? "block" : "none";
+}
+</script>
+</div></body>
 </html>
