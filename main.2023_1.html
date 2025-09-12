@@ -83,6 +83,41 @@
     .year-menu .divider {
       color: #ccc;
     }
+
+    /* === 토글 버튼 & 미디어 그리드 === */
+    .view-toggle {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .view-toggle button {
+      margin: 0 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+      font-weight: 700;
+      font-family: 'Pretendard-Regular', sans-serif;
+      text-transform: uppercase;
+    }
+    .view-toggle button:hover {
+      background: #ddd;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      max-width: 340px;
+      margin: 20px auto;
+    }
+    .grid-container img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    /* ================================== */
+
     .button-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -127,7 +162,7 @@
       text-decoration: underline;
       font-weight: bold;
     }
-  </style>
+</style>
 </head>
 <body>
 <div class="header-container">
@@ -145,11 +180,18 @@
 <span class="divider">|</span>
 <span class="year selected" onclick="location.href='main.2023_1.html'">2023</span>
 </div>
+<!-- 토글 버튼 -->
+<div class="view-toggle">
+<button onclick="showSection('messages')">MESSAGES</button>
+<button onclick="showSection('media')">MEDIA</button>
+</div>
+<!-- 메시지 섹션 -->
+<div id="messages-section">
 <div class="button-grid">
 <a class="date-button" href="230102.html">
-<img alt="썸네일" src="https://github.com/tkaqufdl/backupformh/blob/main/thumbnails/230102.jpeg?raw=true">
+<img alt="썸네일" src="https://github.com/tkaqufdl/backupformh/blob/main/thumbnails/230102.jpeg?raw=true"/>
 <span>230102</span>
-</img></a>
+</a>
 <a class="date-button" href="230105.html">
 <img alt="썸네일" src="https://github.com/tkaqufdl/backupformh/blob/main/thumbnails/230105.jpeg?raw=true"/>
 <span>230105</span>
@@ -178,5 +220,20 @@
 <a class="page" href="main.2023_4.html">4</a>
 <a class="page" href="main.2023_2.html">»</a>
 </div>
+</div>
+<!-- 미디어 섹션 -->
+<div id="media-section" style="display:none;">
+<div class="grid-container"><a href="230114.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2023/230114-1.JPG?raw=true"/></a>
+<a href="230114.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2023/230114-2.JPG?raw=true"/></a>
+<a href="230128.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2023/230128-1.JPG?raw=true"/></a>
+<a href="230128.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2023/230128-2.JPG?raw=true"/></a>
+<a href="230216.html"><img src="https://github.com/tkaqufdl/backupformh/blob/main/images_year/2023/230216.JPG?raw=true"/></a></div>
+</div>
+<script>
+function showSection(id) {
+  document.getElementById("messages-section").style.display = (id==="messages") ? "block" : "none";
+  document.getElementById("media-section").style.display    = (id==="media") ? "block" : "none";
+}
+</script>
 </body>
 </html>
